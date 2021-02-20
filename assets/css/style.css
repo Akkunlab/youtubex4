@@ -1,0 +1,147 @@
+/*------------------------------------
+  Default Style
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Kanit:wght@300&family=Noto+Sans+JP&display=swap');
+
+* { margin: 0; padding: 0; }
+:root {
+    --padding-side: 25px;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+body {
+    font-size: 1.6em;
+    /*overflow: hidden;*/
+}
+.wrap {
+    position: relative;
+}
+a {
+    color: #FFFFFF;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition-property: all;
+    transition: .5s linear;
+}
+svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: #FFFFFF;
+}
+input, button {
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/*------------------------------------
+  Header
+------------------------------------*/
+header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    box-sizing: border-box;
+    background: #181818;
+}
+.header_wrap {
+    padding: 0 var(--padding-side);
+    display: block;
+}
+.logo {
+    height: 60px;
+    font-size: 1.2rem;
+}
+
+/*------------------------------------
+  Settings
+------------------------------------*/
+.settings {
+    right: 0;
+    position: absolute;
+    box-sizing: border-box;
+}
+.settings_wrap {
+    padding: 8px var(--padding-side);
+    display: flex;
+    justify-content: flex-end;
+}
+.settings_wrap span,
+.settings_wrap button,
+.settings_wrap select,
+.volume_wrap {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background: #070707;
+}
+
+@media screen and (max-width: 1280px) {
+    .settings_wrap {
+        padding: 8px;
+    }
+    .settings_wrap span,
+    .settings_wrap button,
+    .settings_wrap select,
+    .volume_wrap {
+        font-size: 1.2rem;
+        margin: 0 1px;
+    }
+    .volume_wrap {
+        display: none;
+    }
+}
+
+/*------------------------------------
+  Main
+------------------------------------*/
+main {
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    font-size: 1px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    background: #181818;
+}
+div[id*="player"] {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #202020;
+    border: solid 1px #181818;
+    box-sizing: border-box;
+}
+div[id*="player"] span {
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-align: center;
+}
+input[class*="player"] {
+    color: #FFFFFF;
+    max-width: 500px;
+    width: calc(100% - 30px);
+    height: 36px;
+    font-size: 2rem;
+    background: transparent;
+    border-bottom:1px solid #6A7575;
+}
+input[class*="player"]:focus {
+    border-bottom:1px solid #1C62B9;
+}

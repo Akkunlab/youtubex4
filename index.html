@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube x4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <div class="wrap">
+
+        <!-- ▼ ヘッダー ▼ -->
+        <header>
+            <div class="header_wrap">
+                <div class="logo">
+                    <a href="https://akkunlab.github.io/youtubex4/"><h1>YouTube x4</h1></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ▼ 設定 ▼ -->
+        <div class="settings">
+            <div class="settings_wrap">
+                <span>設定</span>
+                <button type="button" id="play_pause">
+                    <svg viewBox="0 0 448 512">
+                        <use class="play_pause_svg" xlink:href="./assets/img/graphics.svg#pause"></use>
+                    </svg>
+                </button>
+                <button type="button" id="mute">
+                    <svg class="mute_svg" viewBox="0 0 576 512">
+                        <use xlink:href="./assets/img/graphics.svg#volume_up"></use>
+                        <use xlink:href="./assets/img/graphics.svg#mute"></use>
+                    </svg>
+                </button>
+                <div class="volume_wrap">
+                    <label for="volume">音量</label>
+                    <input id="volume" type="range" value="0" step="5">
+                </div>
+            </div>
+        </div>
+
+        <!-- ▼ メイン ▼ -->
+        <main>
+            <div id="player1">
+                <input type="url" class="player1_url_input" maxlength="256" placeholder="URLを入力" autofocus>
+            </div>
+            <div id="player2">
+                <input type="url" class="player2_url_input" maxlength="256" placeholder="URLを入力" autofocus>
+            </div>
+            <div id="player3">
+                <input type="url" class="player3_url_input" maxlength="256" placeholder="URLを入力" autofocus>
+            </div>
+            <div id="player4">
+                <input type="url" class="player4_url_input" maxlength="256" placeholder="URLを入力" autofocus>
+            </div>
+        </main>     
+
+    </div>
+
+    <!-- ▼ JavaScript ▼ -->
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+
+</body>
+</html>
