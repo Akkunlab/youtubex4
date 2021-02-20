@@ -74,6 +74,7 @@ function onPlayerReady(e) {
 // 音量設定
 volume.addEventListener('click', () => setVolume(volume.value));
 function setVolume(value) {
+    if (!config.YT.playerList.length) return;
     for (let i = 0; i < config.YT.dataList.length; i++) {
         config.YT.playerList[i].setVolume(value);
     }
@@ -81,6 +82,7 @@ function setVolume(value) {
 
 // 再生・一時停止設定
 playPause.addEventListener('click', () => {
+    if (!config.YT.playerList.length) return;
     for (let i = 0; i < config.YT.dataList.length; i++) {
         if (config.YT.playerList[i].getPlayerState() === 1) {
             config.YT.playerList[i].pauseVideo();
@@ -94,6 +96,7 @@ playPause.addEventListener('click', () => {
 
 // 消音設定
 mute.addEventListener('click', () => {
+    if (!config.YT.playerList.length) return;
     for (let i = 0; i < config.YT.dataList.length; i++) {
         if (config.YT.playerList[i].isMuted()) {
             config.YT.playerList[i].unMute();
@@ -109,14 +112,11 @@ mute.addEventListener('click', () => {
 
 // リサイズ
 window.onresize = () => {
+    if (!config.YT.playerList.length) return;
     for (let i = 0; i < config.YT.dataList.length; i++) {
         config.YT.playerList[i].setSize(window.innerWidth / 2, (window.innerHeight - 60) / 2);
     };
 };
-
-function resizePlayer() {
-
-}
 
 // URL設定
 document.body.addEventListener('keydown', e => {
