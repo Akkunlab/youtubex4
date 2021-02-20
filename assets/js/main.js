@@ -1,8 +1,8 @@
 /* 設定 */
 const config = {
     YT: {
-        width: window.innerWidth / 2,
-        height: (window.innerHeight - 60) / 2,
+        width: document.body.clientWidth / 2,
+        height: (document.body.clientHeight - 60) / 2,
         loadingPlayerNumber: 0,
         playerList: [],
         dataList: [{
@@ -114,7 +114,7 @@ mute.addEventListener('click', () => {
 window.onresize = () => {
     if (!config.YT.playerList.length) return;
     for (let i = 0; i < config.YT.dataList.length; i++) {
-        config.YT.playerList[i].setSize(window.innerWidth / 2, (window.innerHeight - 60) / 2);
+        config.YT.playerList[i].setSize(document.body.clientWidth / 2, (document.body.clientHeight - 60) / 2);
     };
 };
 
